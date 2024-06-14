@@ -1,0 +1,93 @@
+/* Media Queries para Responsividade em Dispositivos Móveis */
+@media (max-width: 480px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .icons {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .logo,
+    .nav,
+    .icons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imagemfundo {
+        height: auto;
+        background-size: cover;
+    }
+
+    .boxtext {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .icons {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .logo,
+    .nav,
+    .icons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imagemfundo {
+        height: auto;
+        background-size: cover;
+    }
+
+    .boxtext {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .icons {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .logo,
+    .nav,
+    .icons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imagemfundo {
+        height: auto;
+        background-size: cover;
+    }
+
+    .boxtext {
+        padding: 10px;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    height: 41;
+    width: 163;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.imgtopo {
+
+    margin: 0;
+}
+.compass {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 273px;
+    font-size: 17px;
+    font-weight: 600;
+    word-spacing: 0.7em;
+    align-items: center;
+}
+
+.lista {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+.icons {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    margin-left: 320px;
+    margin-right: 22px;
+    height: 20px;
+    width: 20px;
+
+}
+
+.icons{
+    display: flex;
+    gap: 18px;
+}
+
+section{
+    display: flex;
+}
+
+.imagemfundo {
+    background-image: url(imagens/center.png);
+    width: 1440px;
+    height: 316px;
+    background-position: center;
+    display: flex;
+}
+
+.boxtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+}
+
