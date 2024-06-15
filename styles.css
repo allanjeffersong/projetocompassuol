@@ -56,6 +56,9 @@ header {
     padding: 10px;
 }
 
+.lista:hover{
+    color: #B0B0B0;
+}
 
 .icons {
     text-decoration: none;
@@ -97,11 +100,17 @@ section{
 }
 
 .produtos {
+    
     display: flex;
+
 }
 
 .containers {
     display: flex;
+    margin-left: 45px;
+    justify-content: space-between;
+    margin-top: 20px;
+    
 }
 
 .container1, .container2, .container3, .container4 {
@@ -109,44 +118,30 @@ section{
     display: flex;
     flex-direction: column;
     grid-template-columns: 1fr;
+    width: 289px;
+    height: 446px;
+    flex-grow: 1;
 }
 
 .container1 {
-    width: 285px;
-    height: 446px;
-    margin-top: 40px;
-    margin-left: 80px;
-    border: 1px solid black;
-    background-color:#F4F5F7;
     display: flex;
     flex-direction: column;
+    background-clip: content-box;
+    
 }
 
 .container2 {
-    width: 285px;
-    height: 446px;
-    margin-top: 40px;
-    margin-left: 25px;
-    border: 1px solid black;
-    background-color:#F4F5F7;
+    
 }
 
 .container3 {
-    width: 285px;
-    height: 446px;
-    margin-top: 40px;
-    margin-left: 25px;
-    border: 1px solid black;
-    background-color:#F4F5F7;
+
+    
 }
 
 .container4 {
-    width: 285px;
-    height: 446px;
-    margin-top: 40px;
-    margin-left: 25px;
-    border: 1px solid black;
-    background-color:#F4F5F7;
+
+    
 }
 
 .textcontainer {
@@ -155,6 +150,9 @@ section{
     padding-left: 16px;
     padding-top: 20px;
     gap: 20px;
+    background-color: #F4F5F7;
+    width: 285px;
+    padding-bottom: 15px;
 }
 
 .stysh {
@@ -182,4 +180,51 @@ section{
     font-size: 16px;
     color: #B0B0B0;
     text-decoration:line-through;
+}
+
+.filter {
+    width: 1440px;
+    height: 100px;
+    background-color: #F9F1E7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.filtro {
+    margin-left: 40px;
+    font-size: 20px;
+    display: flex;
+    padding: 30px;
+
+}
+
+.showing {
+    padding-left: 40px;
+    font-size: 16px;
+    display: flex;
+}
+
+.bordashowing {
+    border-left: 2px solid #9F9F9F;
+    height: 37px;
+    display: flex;
+    align-items: center;
+}
+
+.showend {
+    font-size: 20px;
+    gap: 5px;
+    height: 55px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.começofilter {
+    display: flex;
+    align-items: center;
 }
