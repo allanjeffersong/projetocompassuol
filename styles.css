@@ -121,6 +121,7 @@ section{
     width: 289px;
     height: 446px;
     flex-grow: 1;
+    position: relative;
 }
 
 .container1 {
@@ -130,19 +131,6 @@ section{
     
 }
 
-.container2 {
-    
-}
-
-.container3 {
-
-    
-}
-
-.container4 {
-
-    
-}
 
 .textcontainer {
     display: flex;
@@ -168,6 +156,7 @@ section{
 .p1 {
     color: #3A3A3A;
     font-size: 20px;
+    font-weight: bolder;
 }
 
 .priscado {
@@ -227,4 +216,90 @@ section{
 .começofilter {
     display: flex;
     align-items: center;
+}
+
+.desconto30 {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color:#E97171;
+    color: #FFFFFF; 
+    line-height: 1;
+    position: absolute; 
+    top: 5px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desconto50 {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color:#E97171; 
+    font-size: 18px; 
+    color: #FFFFFF; 
+    line-height: 1;
+    position: absolute; 
+    top: 5px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.newverde {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color:#2EC1AC;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1;
+    position: absolute; 
+    top: 5px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.imagem1, .imagem2, .imagem3, .imagem4 {
+    width: 285px;
+    height: 301px;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.imagem1{
+    background-image: url(imagens/imagem1.png);
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+}
+
+.imagem2{
+    background-image: url(imagens/Images.png);
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+}
+
+.imagem3{
+    background-image: url(imagens/imagem3.png);
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+}
+
+.imagem4{
+    background-image: url(imagens/imagem4.jpeg);
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+
 }
