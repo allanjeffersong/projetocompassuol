@@ -2,18 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+    }
+    
+    body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     max-width: 100%;
     overflow-x: hidden;
-}
-
-header {
+    }
+    
+    header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,28 +22,28 @@ header {
     margin: 0 auto;
     padding-right: 55px;
     height: 100px;
-}
-
-.navbar {
+    }
+    
+    .navbar {
     display: flex;
     align-items: center;
-}
-
-.logo {
+    }
+    
+    .logo {
     display: flex;
     align-items: center;
-}
-
-.imgtopo {
+    }
+    
+    .imgtopo {
     margin-right: 0px
-}
-
-.compass {
+    }
+    
+    .compass {
     font-size: 34px;
     font-weight: 800;
-}
-
-.nav {
+    }
+    
+    .nav {
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -52,46 +52,46 @@ header {
     word-spacing: 0.7em;
     align-items: center;
     gap: 20px;
-}
-
-.lista {
+    }
+    
+    .lista {
     color: black;
     text-decoration: none;
     padding: 10px;
-}
-
-.lista:hover {
+    }
+    
+    .lista:hover {
     color: #B0B0B0;
-}
-
-.icons {
+    }
+    
+    .icons {
     display: flex;
     gap: 18px;
-}
-
-.icons a img {
+    }
+    
+    .icons a img {
     display: block;
     width: 24px;
     height: 24px;
-}
-
-section {
+    }
+    
+    section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1440px;
     margin: auto;
-}
-
-.começofilter{
+    }
+    
+    .começofilter{
     display:flex;
     align-items: center;
     padding-left: 15px;
     gap: 15px;
-}
-
-.imagemfundo {
+    }
+    
+    .imagemfundo {
     background-image: url('imagens/center.png');
     width: 100%;
     max-width: 1440px;
@@ -102,9 +102,9 @@ section {
     align-items: center;
     text-align: center;
     color: black;
-}
-
-.filter {
+    }
+    
+    .filter {
     width: 100%;
     max-width: 1440px;
     height: 100px;
@@ -115,47 +115,101 @@ section {
     justify-content: space-between;
     padding:  20px;
     margin: auto;
-}
-
-.filtro {
+    }
+    
+    .filtro {
     font-size: 20px;
-}
-
-.showing {
+    }
+    
+    .showing {
     font-size: 16px;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.bordashowing {
+    }
+    
+    .bordashowing {
     display: flex;
     border-left: 2px solid #9F9F9F;
     height: 37px;
     margin-left: 10px;
     padding-left: 10px;
-}
-
-.showend {
+    }
+    
+    .showend {
     font-size: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.boxinput {
+    }
+    
+    .boxinput {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-.boxinput input {
+    
+    }
+    
+    .boxinput input {
     width: 100%;
     height: 100%;
     border: none;
     padding: 0;
+    }
+
+
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
+
+.item {
+    background-color: #e0e0e0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.item .image {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+.item .description {
+    margin: 5px 0;
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+/* styles.css */
+
 
 .containers {
     display: flex;
@@ -171,22 +225,22 @@ section {
 .container1, .container2, .container3, .container4 {
     display: flex;
     flex-direction: column;
-    width: calc(25% - 20px);
-    max-width: 289px;
-    height: 446px;
+    width: 285px; /* Alterado para largura de 285px */
+    max-width: 285px; /* Alterado para largura de 285px */
+    height: 446px; /* Alterado para altura de 446px */
     position: relative;
     background-color: #F4F5F7;
     overflow: hidden;
 }
 
-.container1 .textcontainer, .container2 .textcontainer, .container3 .textcontainer, .container4 .textcontainer {
-    padding: 20px;
-}
-
 .textcontainer {
+    padding-top: 15px;
+    padding-left: 15px;
+    height: 145px; /* Alterado para altura de 145px */
+    width: 100%; /* Mantido em 100% */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .sylt {
@@ -197,6 +251,7 @@ section {
 .stysh {
     color: #898989;
     font-size: 16px;
+    margin: 0;
 }
 
 .p1 {
@@ -244,8 +299,8 @@ section {
 }
 
 .imagem1, .imagem2, .imagem3, .imagem4 {
-    width: 100%;
-    height: 60%;
+    width: 100%; /* Mantido em 100% */
+    height: 285px; /* Alterado para altura de 285px */
     background-size: cover;
     background-position: center;
 }
@@ -266,9 +321,85 @@ section {
     background-image: url('imagens/imagem4.jpeg');
 }
 
-.container1:hover{
-    opacity: 50%;
-    background-color: #000000;
+.hug {
+    height: 320px;
+    max-width: 1440px;
+    padding-top: 40px;
+    
+}
+.botoes {
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    background-color: rgba(249, 241, 231, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.localbotoes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1440px;
+}
+
+.botoes:hover {
+    background-color: rgba(184, 142, 47, 1);
+    color: white;
+}
+
+.footer1 {
+    height: 270px;
+    background-color: rgba(250, 243, 234, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 40px;
+}
+
+.boxtrofeu{
+    width: Hug (337px);
+    height: Hug (70px);
+    display: flex;
+    
+}
+
+.imgagemesquerda{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.direitaimagem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.nomedecima {
+    display: flex;
+    align-items: flex-start;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nomedebaixo {
+    font-size: 20px;
+    color: rgba(137, 137, 137, 1);
+    display: flex;
+    align-items: flex-end;
+}
+
+.boxsecurity, .boxshipping, .boxsuport  {
+    width: Hug (337px);
+    height: Hug (70px);
+    display: flex;
 
 }
 
