@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Syltherine',
             description: 'Stysh cafe chair',
             price: 'Rp 2.500.000',
-            oldPrice: 'Rp 3.500.000'
+            oldPrice: 'Rp 3.500.000',
+            priceValue: 2500000
         },
         {
             class: 'container2',
@@ -24,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Leviosa',
             description: 'Stysh cafe chair',
             price: 'Rp 2.500.000',
-            oldPrice: null
+            oldPrice: null,
+            priceValue: 2500000
         },
         {
             class: 'container3',
@@ -34,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Lolito',
             description: 'Luxury big sofa',
             price: 'Rp 7.000.000',
-            oldPrice: 'Rp 14.000.000'
+            oldPrice: 'Rp 14.000.000',
+            priceValue: 7000000
         },
         {
             class: 'container4',
@@ -44,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Respira',
             description: 'Outdoor bar table and stool',
             price: 'Rp 500.000',
-            oldPrice: null
+            oldPrice: null,
+            priceValue: 500000
         }
     ];
   
@@ -114,7 +118,122 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     // Inicializa com o valor padrão de itens
-    const initialItemsPerPage = parseInt(itemCountSelect.value);
+    const initialItemsPerPage = 12; // Definindo o valor inicial padrão de 12
     populateItems(initialItemsPerPage);
-  });
+
+    // Configura o seletor de contagem de itens para permitir alteração dinâmica
+    function setupItemCountSelect() {
+        itemCountSelect.innerHTML = ''; // Limpa as opções existentes
+        const options = [4, 8, 12, 16, 20];
+        options.forEach(option => {
+            const optElement = document.createElement('option');
+            optElement.value = option;
+            optElement.textContent = option;
+            if (option === initialItemsPerPage) {
+                optElement.selected = true;
+            }
+            itemCountSelect.appendChild(optElement);
+        });
+    }
+    setupItemCountSelect();
   
+    // Função para ordenar e exibir os itens
+    function sortItems(criteria) {
+        let sortedData = [];
+        switch (criteria) {
+            case 'az':
+                sortedData = itemData.slice().sort((a, b) => a.name.localeCompare(b.name));
+                break;
+            case 'za':
+                sortedData = itemData.slice().sort((a, b) => b.name.localeCompare(a.name));
+                break;
+            case 'low-to-high':
+                sortedData = itemData.slice().sort((a, b) => a.priceValue - b.priceValue);
+                break;
+            case 'high-to-low':
+                sortedData = itemData.slice().sort((a, b) => b.priceValue - a.priceValue);
+                break;
+        }
+        itemsContainer.innerHTML = '';
+        sortedData.forEach(data => {
+            itemsContainer.appendChild(createItem(data));
+        });
+    }
+
+    // Adiciona evento aos selects de ordenação
+    document.addEventListener('change', (e) => {
+        if (e.target.matches('#filter-options select')) {
+            sortItems(e.target.value);
+        }
+    });
+
+    // Manipulação de exibição do filtro
+    const filterHeader = document.querySelector('.começofilter');
+    const filterOptionsContainer = document.getElementById('filter-options');
+    
+    filterHeader.addEventListener('click', () => {
+        if (filterOptionsContainer.style.display === 'none') {
+            filterOptionsContainer.style.display = 'block';
+            populateSelects();
+        } else {
+            filterOptionsContainer.style.display = 'none';
+        }
+    });
+
+    function populateSelects() {
+        // Limpa qualquer conteúdo existente
+        filterOptionsContainer.innerHTML = '';
+
+        // Cria o primeiro select com as opções A-Z e Z-A
+        const orderSelect = document.createElement('select');
+        const optionAZ = document.createElement('option');
+        optionAZ.value = 'az';
+        optionAZ.textContent = 'A-Z';
+
+        const optionZA = document.createElement('option');
+        optionZA.value = 'za';
+        optionZA.textContent = 'Z-A';
+
+        orderSelect.appendChild(optionAZ);
+        orderSelect.appendChild(optionZA);
+
+        // Cria o segundo select com as opções de preço
+        const priceSelect = document.createElement('select');
+        const optionHighToLow = document.createElement('option');
+        optionHighToLow.value = 'high-to-low';
+        optionHighToLow.textContent = 'Maior preço - Menor preço';
+
+        const optionLowToHigh = document.createElement('option');
+        optionLowToHigh.value = 'low-to-high';
+        optionLowToHigh.textContent = 'Menor preço - Maior preço';
+
+        priceSelect.appendChild(optionHighToLow);
+        priceSelect.appendChild(optionLowToHigh);
+
+        // Adiciona os selects ao contêiner
+        filterOptionsContainer.appendChild(orderSelect);
+        filterOptionsContainer.appendChild(priceSelect);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona o input de email
+    const emailInput = document.getElementById('email-input');
+
+    // Função para validar o email usando expressão regular (regexp)
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    // Adiciona um evento de clique ao botão de inscrição
+    const subscribeButton = document.querySelector('.butaofinal');
+    subscribeButton.addEventListener('click', () => {
+        const email = emailInput.value.trim();
+        if (validateEmail(email)) {
+            alert("Pronto, seu email foi validado");
+        } else {
+            alert("Ops, seu email não é válido");
+        }
+    });
+});

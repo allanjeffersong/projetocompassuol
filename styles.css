@@ -403,3 +403,112 @@
 
 }
 
+.footer2 {
+    display: flex;
+    padding-left: 75px;
+    padding-top: 35px;
+    padding-right: 40px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.titlefooter {
+    font-size: 24px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.textfooter {
+    font-size: 16px;
+    color: rgba(159, 159, 159, 1);
+    display: flex;
+    align-items: center;
+}
+
+
+.part1 {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    width: 300px; ;
+}
+
+.part2, .part3 {
+    gap: 25px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.listafooter {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    list-style: none;
+    font-size: 16px;
+} 
+.part4 {
+    margin: right 30px;
+    gap: 25px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nomedecima2 {
+    text-decoration: none;
+    color:rgba(159, 159, 159, 1);
+    font-size: 16px;
+}
+
+.container1:hover, .container2:hover, .container3:hover, .container4:hover {
+    background-color: rgba(0, 0, 0, 0.303);
+    color: white;
+    filter: brightness(70%); /* Escurece as imagens de fundo */
+
+}
+.butao {
+    border: 1px solid rgb(118, 118, 118);
+    background-color: rgba(255, 255, 255, 1);
+    color: orange;
+    width: 202px;
+    height: 48px;
+    display: none;
+}
+
+.butao:hover {
+    background-color: orange;
+    color: white;
+    border: 1px solid red;
+}
+
+#filter-options select {
+    display: block;
+    margin: 10px 0;
+}
+
+.começofilter {
+    cursor: pointer; /* Adiciona um cursor pointer para indicar que é clicável */
+}
+
+
+.butaofinal {
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: azure;
+}
+
+.butaofinal:hover {
+    background-color: rgb(114, 56, 207);
+    color: white;
+}
+
+.gap{
+    display: flex;
+    gap: 10px;
+}
+
+.inputfinal {
+    
+}
