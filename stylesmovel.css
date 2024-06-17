@@ -26,4 +26,26 @@
     .icons {
         margin-left: 0;
     }
+
+    section {
+        display: flex;
+    }
+
+    .footer1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the elements horizontally */
+        justify-content: center; /* Center the elements vertically */
+    }
+
+    .boxtrofeu, .boxsecurity {
+        width: 100%; /* Make the boxes take up the full width */
+        transform: scale(0.5); /* Reduce the size by 50% */
+    }
+
+    .boxshipping, .boxsuport {
+        width: 100%; /* Make the boxes take up the full width */
+        transform: scale(0.5); /* Reduce the size by 50% */
+    }
 }
+
